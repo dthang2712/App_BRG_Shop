@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whiteTwo">
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorLight">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:padding="18dp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="19dp"
+            android:src="@drawable/logo_back_ground" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_phone_gray" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:orientation="vertical"
+        android:paddingHorizontal="27sp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="46sp"
+            android:layout_marginTop="10sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius">
+            <EditText
+                android:id="@+id/EditText_Name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Người nhận "
+                android:textColorHint="@color/grayAeb"
+                android:textColor="@color/colorDark"
+                android:background="@drawable/bg_light_radius"
+                android:inputType="textNoSuggestions"
+                android:textSize="14sp"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="46sp"
+            android:layout_marginTop="10sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius">
+            <EditText
+                android:id="@+id/EditText_Sdt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Số điện thoại"
+                android:textColorHint="@color/grayAeb"
+                android:textColor="@color/colorDark"
+                android:background="@drawable/bg_light_radius"
+                android:inputType="textNoSuggestions"
+                android:textSize="14sp"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="46sp"
+            android:layout_marginTop="10sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius">
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/Spinner_province"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="match_parent"
+                android:popupBackground="@drawable/bg_light_radius"
+                />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="46sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius"
+            android:layout_marginTop="10sp">
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_district"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="match_parent"
+                android:popupBackground="@drawable/bg_light_radius"/>
+
+        </FrameLayout>
+        <RadioGroup
+            android:id="@+id/radio_address"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:paddingLeft="22dp"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/RadioButton_noilamviec"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_marginRight="22dp"
+                android:buttonTint="@color/colorDark3"
+                android:text="Nơi làm việc"/>
+
+            <RadioButton
+                android:id="@+id/RadioButton_nharieng"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:buttonTint="@color/colorDark3"
+                android:text="Nhà riêng"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/TextView_huybo"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="11dp"
+                android:text="Hủy bỏ"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:textColor="@color/colorDark"
+                android:background="@drawable/bg_white_three_radius"/>
+
+            <TextView
+                android:id="@+id/TextView_luulai"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:text="Lưu lại"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:textColor="@color/colorLight"
+                android:background="@drawable/bg_red_radius"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@color/colorDarkLoadding"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</RelativeLayout>

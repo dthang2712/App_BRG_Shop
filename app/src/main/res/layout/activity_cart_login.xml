@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteTwo">
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorLight">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:padding="18dp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="19dp"
+            android:src="@drawable/logo_back_ground" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_phone_gray" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/layout_header"
+        android:layout_marginHorizontal="27dp"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vui lòng nhập số điện thoại để tiếp tục"
+            android:textSize="16sp"
+            android:textColor="@color/appBlack"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/edt_sdt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_gray_border_radius"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:paddingLeft="12sp"/>
+
+        <TextView
+            android:id="@+id/TextView_otp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="NHẬN MÃ OTP"
+            android:textColor="@color/colorLight"
+            android:background="@drawable/bg_red_radius"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@color/colorDarkLoadding">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</RelativeLayout>

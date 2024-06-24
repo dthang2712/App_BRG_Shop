@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/whiteTwo">
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorLight">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:padding="18dp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="19dp"
+            android:src="@drawable/logo_back_ground" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_phone_gray" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50sp"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/liss_address"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/design_list_address"/>
+            <TextView
+                android:id="@+id/themdiachi"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="19dp"
+                android:gravity="center_vertical"
+                android:background="@color/colorLight"
+                android:paddingLeft="27sp"
+                android:text="Thêm địa chỉ"
+                android:paddingRight="27sp"
+                android:textColor="@color/colorDark" />
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_add"
+                android:layout_marginTop="-36dp"
+                android:padding="3dp"
+                android:layout_marginRight="27sp"/>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true">
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</RelativeLayout>

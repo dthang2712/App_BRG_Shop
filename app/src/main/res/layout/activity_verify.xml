@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteTwo">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorLight">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:padding="18dp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="53sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="19dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/logo_back_ground" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_phone_gray" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/layout_header"
+        android:paddingHorizontal="34dp"
+        android:paddingBottom="200dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhập mã OTP"
+            android:textColor="@color/colorDark"
+            android:gravity="center"
+            android:layout_marginTop="38dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="27dp"
+            android:layout_marginTop="28dp"
+            android:weightSum="3">
+            <TextView
+                android:id="@+id/txt_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:layout_alignParentStart="true"
+                android:text="Mã OTP sẽ bị hủy sau: "
+
+                android:textColor="@color/colorDark"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/txt_time_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="34s."
+                android:layout_toEndOf="@id/txt_otp"
+                android:layout_toRightOf="@id/txt_otp"
+
+                android:textColor="@color/colorDark"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txt_guilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+
+                android:gravity="center"
+                android:text="Gửi lại !"
+                android:textColor="@color/appRed"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginHorizontal="27dp"
+            android:divider="@drawable/divider_otp"
+            android:showDividers="middle"
+            android:weightSum="4">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_otp"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/edt_otp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorDark"
+                    android:textSize="16sp"
+                    android:layout_margin="8sp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorDark"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_otp"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/edt_otp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorDark"
+                    android:textSize="16sp"
+                    android:layout_margin="8dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorDark"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_otp"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/edt_otp3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorDark"
+                    android:textSize="16sp"
+                    android:layout_margin="8dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorDark"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_otp"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/edt_otp4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/colorDark"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/colorDark"
+                    android:textSize="16sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_red_radius"
+            android:text="ĐĂNG NHẬP"
+            android:layout_marginTop="27dp"
+            android:textColor="@color/colorLight"
+            android:gravity="center"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="@color/colorDarkLoadding">
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</RelativeLayout>

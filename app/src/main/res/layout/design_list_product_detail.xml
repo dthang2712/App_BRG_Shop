@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorLight"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/RLT_Loai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteTwo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/TextView_loai"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorGrayB9"
+            android:gravity="center"
+            android:text="Loại"
+            android:textColor="@color/colorDark"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/product_description"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10sp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="Bánh quy hoa bơ tự nhiên Marika vị truyền thống và vị socola"
+            android:textColor="@color/colorDark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

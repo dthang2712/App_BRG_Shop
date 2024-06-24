@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteTwo"
+    android:gravity="center_horizontal"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorLight"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:padding="18sp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="19dp"
+            android:src="@drawable/logo_back_ground" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="17dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/icon_phone_gray2" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        android:text="Mọi khiếu nại/thắc mắc, Quý khách vui lòng liên hệ:"
+        android:textColor="@color/colorDark"
+        android:paddingHorizontal="27dp"
+        android:paddingTop="27dp"
+        android:background="@color/colorLight"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hotline: 091.654.252 (Từ 8h - 20h)"
+        android:textSize="18sp"
+        android:textColor="@color/colorDark"
+        android:paddingTop="3dp"
+        android:paddingHorizontal="27dp"
+        android:background="@color/colorLight"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email: cskh@brgretail.vn"
+        android:textSize="18sp"
+        android:textColor="@color/colorDark"
+        android:paddingTop="3dp"
+        android:paddingHorizontal="27dp"
+        android:paddingBottom="27dp"
+        android:background="@color/colorLight"/>
+
+</LinearLayout>

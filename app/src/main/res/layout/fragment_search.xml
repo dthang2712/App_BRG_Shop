@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLight">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="65sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="60sp"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:padding="18dp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="53sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="19dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/logo_back_ground" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_phone_gray" />
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/product_logo"
+            android:layout_marginHorizontal="16dp"
+            android:searchIcon="@drawable/icon_search_white"
+            android:queryHint="Bạn đang tìm sản phẩm nào ?"
+            android:background="@drawable/bg_gray_border_radius"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:background="@color/colorLight">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="27sp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kết quả tìm kiếm theo danh mục"
+                android:layout_marginTop="14sp"
+                android:textSize="16sp"
+                android:textColor="@color/grayAeb"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/List_KquaTimKiemDM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kết quả tìm kiếm theo sản phẩm"
+                android:layout_marginTop="14sp"
+                android:textSize="16sp"
+                android:textColor="@color/grayAeb"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/List_KquaTimKiemSP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

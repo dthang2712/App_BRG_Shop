@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/xanh6">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo_back_ground" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/image_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="140dp"/>
+
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_no_color_border"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingHorizontal="20dp"
+        android:text="Trải nghiệm ngay!"
+        android:textColor="@color/colorLight"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="167dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_no_color_border"
+        android:gravity="center"
+        android:visibility="visible"
+        android:paddingHorizontal="20dp"
+        android:text="Xem tiếp"
+        android:drawableRight="@drawable/next"
+        android:textColor="@color/colorLight"
+        android:textSize="16sp" />
+
+</RelativeLayout>

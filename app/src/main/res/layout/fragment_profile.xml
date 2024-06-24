@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:clickable="true">
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorLight">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:padding="18dp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="53sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="19dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/logo_back_ground" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_phone_gray" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLight"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_header"
+        android:paddingBottom="12sp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27sp"
+            android:paddingHorizontal="27sp">
+
+            <LinearLayout
+                android:id="@+id/layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:text="Họ và tên"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:text="Email"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:text="Số điện thoại"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:text="Ngày sinh"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="Công ty"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:text="Mã KH thân thiết"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@id/layout_title"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TextView_hoten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="end"
+                    android:text="Họ và tên"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorDark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/TextView_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="end"
+                    android:text="Email"
+                    android:textColor="@color/colorDark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/TextView_sdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="end"
+                    android:text="Số điện thoại"
+                    android:textColor="@color/colorDark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/TextView_ngaysinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="end"
+                    android:text="Ngày sinh"
+                    android:textColor="@color/colorDark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/TextView_congty"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="Công tyCông tyCông tyCông tyCông tyCông tyCông ty "
+                    android:textColor="@color/colorDark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/TextView_makhtt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="end"
+                    android:textColor="@color/colorDark"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="98dp"
+            android:background="@drawable/bg_red_radius"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:text="Chỉnh sửa thông tin"
+            android:textColor="@color/colorLight" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorDarkLoadding"
+        android:clickable="true"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</RelativeLayout>

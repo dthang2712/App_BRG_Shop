@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartListProductFragment">
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorLight">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/xanh6" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:padding="14sp"
+                android:src="@drawable/icon_back"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/product_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:paddingBottom="19dp"
+                android:src="@drawable/logo_back_ground" />
+
+            <ImageView
+                android:id="@+id/img_back_info"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:padding="18sp"
+                android:src="@drawable/icon_back"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/RLT_DsCart"
+            android:layout_width="match_parent"
+            android:layout_height="590sp"
+            android:layout_below="@+id/layout_header"
+            android:padding="15sp">
+            <TextView
+                android:id="@+id/Textview_dscart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Danh sách giỏ hàng"
+                android:textSize="20sp"
+                android:textColor="@color/colorDark"
+                android:textStyle="bold"
+                android:layout_marginTop="-5sp"/>
+            <androidx.core.widget.NestedScrollView
+                android:layout_below="@+id/Textview_dscart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/design_list_card"/>
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_below="@+id/RLT_DsCart"
+            android:background="@color/whiteTwo">
+            <CheckBox
+                android:id="@+id/checkbox_allcart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tất cả"
+                android:layout_toRightOf="@+id/checkbox_allcart"
+                android:gravity="center"
+                android:layout_marginStart="-10sp"
+                android:textColor="@color/colorDark"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/TextView_tongtien"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tổng thanh toán: "
+                android:layout_toRightOf="@+id/checkbox_allcart"
+                android:gravity="center"
+                android:layout_marginStart="90sp"
+                android:textSize="16sp"
+                android:textColor="@color/colorDark"/>
+            <TextView
+                android:id="@+id/TextView_priceAll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="đ0"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@color/appRed"
+                android:layout_toRightOf="@+id/TextView_tongtien"/>
+            <TextView
+                android:id="@+id/TextView_dat_hang"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:background="@drawable/bg_red_radius"
+                android:gravity="center"
+                android:text="Đặt Hàng"
+                android:textColor="@color/colorLight"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/TextView_priceAll"
+                android:layout_marginStart="40sp"/>
+        </RelativeLayout>
+
+</RelativeLayout>

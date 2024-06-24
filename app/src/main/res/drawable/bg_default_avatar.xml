@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/hover_avatar" android:state_pressed="true" />
+
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval">
+            <solid android:color="@color/colorLight" />
+            <stroke android:width="5dip" android:color="@color/appRed" />
+            <size android:height="120dp" android:width="120dp"/>
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusinessView.Activity.ListProductActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/xanh6" />
+
+                <ImageView
+                    android:id="@+id/open_left_menu"
+                    android:layout_width="50dp"
+                    android:layout_height="21dp"
+                    android:layout_alignBottom="@+id/image_logo"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="27sp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingStart="17dp"
+                    android:src="@drawable/icon_menuleft" />
+
+                <ImageView
+                    android:id="@+id/image_phone"
+                    android:layout_width="50dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/image_logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="27sp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingRight="17dp"
+                    android:src="@drawable/icon_phone_white" />
+
+
+                <ImageView
+                    android:id="@+id/image_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="19dp"
+                    android:paddingBottom="20dp"
+                    android:src="@drawable/logo_back_ground" />
+
+                <SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/image_logo"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/bg_gray_border_radius"
+                    android:iconifiedByDefault="false"
+                    android:queryBackground="@android:color/transparent"
+                    android:queryHint="Bạn đang tìm sản phẩm nào ?"
+                    android:searchIcon="@drawable/icon_search_white" />
+    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_header"
+                android:padding="20sp"
+                android:layout_marginTop="-20sp">
+                <TextView
+                    android:id="@+id/TextView_ds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Danh sách sản phẩm "
+                    android:textSize="20sp"
+                    android:textColor="@color/colorDark"
+                    android:textStyle="bold"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/design_product"
+                    android:layout_below="@+id/TextView_ds"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

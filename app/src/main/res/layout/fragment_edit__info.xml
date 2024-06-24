@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorLight">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/xanh6" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="14sp"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="19dp"
+            android:src="@drawable/logo_back_ground" />
+        <ImageView
+            android:id="@+id/img_back_info"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:padding="18sp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="17dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/icon_phone_gray2" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="27sp"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginTop="15sp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="10sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius">
+            <EditText
+                android:id="@+id/edit_text_hoten"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Họ và Tên"
+                android:textColorHint="@color/grayAeb"
+                android:background="@drawable/bg_light_radius"
+                android:textSize="16sp"
+                android:inputType="textNoSuggestions" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="10sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius">
+            <EditText
+                android:id="@+id/edit_text_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Email"
+                android:textColorHint="@color/grayAeb"
+                android:background="@drawable/bg_light_radius"
+                android:textSize="16sp"
+                android:inputType="textNoSuggestions" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="10sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius">
+            <EditText
+                android:id="@+id/edit_text_sdt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Số điện thoại"
+                android:textColorHint="@color/grayAeb"
+                android:background="@drawable/bg_light_radius"
+                android:textSize="16sp"
+                android:inputType="textNoSuggestions" />
+        </FrameLayout>
+        <RelativeLayout
+            android:id="@+id/RLT_ngaysinh"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10sp"
+            android:paddingLeft="20sp"
+            android:background="@drawable/bg_light_radius">
+            <EditText
+                android:id="@+id/EditText_NgaySinh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Ngày sinh"
+                android:textColorHint="@color/grayAeb"
+                android:background="@drawable/bg_light_radius"
+                android:textColor="@color/colorDark"
+                android:enabled="true"
+                android:textSize="16sp"
+                android:inputType="textNoSuggestions"/>\
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:padding="10sp"
+                android:src="@drawable/calendar"/>
+
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="46sp"
+            android:layout_marginTop="10sp"
+            android:paddingHorizontal="20sp"
+            android:background="@drawable/bg_light_radius">
+            <EditText
+                android:id="@+id/EditText_MãKH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Mã KH thân thiết "
+                android:textColor="@color/colorDark"
+                android:textColorHint="@color/grayAeb"
+                android:enabled="true"
+                android:textSize="16sp"
+                android:background="@drawable/bg_light_radius"
+                android:inputType="textNoSuggestions"
+                android:ellipsize="end" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37sp"
+            android:layout_marginTop="20sp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/TextView_Hủy"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15sp"
+                android:text="Hủy bỏ"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:textColor="@color/colorDark"
+                android:background="@drawable/bg_white_three_radius"/>
+            <TextView
+                android:id="@+id/TextView_Lưu"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:text="Lưu lại"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:textColor="@color/colorLight"
+                android:background="@drawable/bg_red_radius"/>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@color/colorDarkLoadding">
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusinessView.Activity.MainActivity">
+        <FrameLayout
+            android:id="@+id/Layout_frame_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="57sp"
+            app:menu="@menu/menu_bottom"
+            android:background="@color/colorLight"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconSize="30sp"
+            android:elevation="2sp"
+            android:layout_alignParentBottom="true"
+            style="@style/Widget.Design.BottomNavigationView"
+            android:paddingTop="0sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

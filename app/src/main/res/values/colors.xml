@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorGray">#DDDDDD</color>
+    <color name="colorGrayE">#EEEEEE</color>
+    <color name="colorBgCategory">#eeffde</color>
+    <color name="colorGrayEb">#ebebeb</color>
+    <color name="colorGrayF">#f1f1f1</color>
+    <color name="colorGrayFB">#fbfbfb</color>
+    <color name="colorGrayC">#c6c6c6</color>
+    <color name="colorGrayB9">#b9b9b9</color>
+    <color name="colorGrayB4">#b4b4b4</color>
+    <color name="colorGrayFC">#fcfcfd</color>
+    <color name="colorGreyTwo">#7a7a7a</color>
+    <color name="whiteTwo">#f2f2f2</color>
+    <color name="whiteThere">#e5e5e5</color>
+    <color name="colorGray70">#707070</color>
+    <color name="colorGray75">#757575</color>
+    <color name="grayAeb">#aeb0b3</color>
+    <color name="grayOutStock">#8Ca8a7a7</color>
+    <color name="colorLight">#FFFFFF</color>
+    <color name="colorDark">#000000</color>
+    <color name="colorDarkTransparent">#BF1a1818</color>
+    <color name="colorDarkLoadding">#4D1a1818</color>
+    <color name="colorLightDF">#DFDFDF</color>
+    <color name="colorBlack">#111111</color>
+    <color name="appBlack">#1a1818</color>
+    <color name="colorDark4">#444444</color>
+    <color name="colorDark6">#666666</color>
+    <color name="colorDark3">#333333</color>
+    <color name="appGreen">#76b143</color>
+    <color name="appRedLight">#de898e</color>
+    <color name="appRed">#be141e</color>
+    <color name="appDemRed">#9d0b19</color>
+    <color name="appRedHover">#ed4a53</color>
+    <color name="appGreenLight">#86db3c</color>
+    <color name="LightGreen">#97e157</color>
+    <color name="Green">#77b243</color>
+    <color name="DarkGreen">#6f9d47</color>
+    <color name="appOrange">#f58220</color>
+    <color name="Orange">#fa9819</color>
+    <color name="LightBlue">#38c9f5</color>
+    <color name="LightBlue2">#d4f1f5</color>
+    <color name="DarkBlue">#477eff</color>
+
+    <!-- A light Holo shade of blue. Equivalent to #ff33b5e5. -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <!-- A light Holo shade of gray. Equivalent to #33999999. -->
+    <color name="holo_gray_light">#33999999</color>
+    <!-- A light Holo shade of green. Equivalent to #ff99cc00. -->
+    <color name="holo_green_light">#ff99cc00</color>
+    <!-- A light Holo shade of red. Equivalent to #ffff4444. <-->
+    <color name="holo_red_light">#ffff4444</color>
+    <!-- A dark Holo shade of blue. Equivalent to #ff0099cc -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <!-- A dark Holo shade of green. Equivalent to #ff669900 -->
+    <color name="holo_green_dark">#ff669900</color>
+    <!-- A dark Holo shade of red. Equivalent to #ffcc0000 -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <!-- A Holo shade of purple. Equivalent to #ffaa66cc -->
+    <color name="holo_purple">#ffaa66cc</color>
+    <!-- A light Holo shade of orange. Equivalent to #ffffbb33. -->
+    <color name="holo_orange_light">#ffffbb33</color>
+    <!-- A dark Holo shade of orange. Equivalent to ffff8800. -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    <!-- A really bright Holo shade of blue. Equivalent to #ff00ddff. -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <!-- A really bright Holo shade of gray. Equivalent to #33cccccc. -->
+    <color name="holo_gray_bright">#33CCCCCC</color>
+</resources>

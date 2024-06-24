@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="130sp"
+    android:background="@drawable/bg_gach_duoi"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/RLT_ten_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="15sp" />
+
+            <TextView
+                android:id="@+id/TextView_diachi"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7sp"
+                android:layout_marginTop="15sp"
+                android:text="Hoàng Đức Thắng "
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:layout_marginTop="15sp"
+                android:text="|"
+                android:textColor="@color/grayAeb"
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9sp"
+                android:layout_marginTop="15dp"
+                android:text="(+84)559258998"
+                android:textColor="@color/grayAeb" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLT_ten_sdt">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:text="33 ngõ 9, Phố An hòa, Phường Mộ Lao, Quận Hà Đông, Hà Nội"
+                android:layout_marginStart="58sp"
+                android:textColor="@color/grayAeb"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

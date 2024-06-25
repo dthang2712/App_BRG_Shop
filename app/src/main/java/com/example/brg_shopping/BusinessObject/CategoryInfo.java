@@ -4,22 +4,12 @@ import java.io.Serializable;
 
 public class CategoryInfo implements Serializable
 {
-    private int autoID;
-    public int getAutoID()
-    {
-        return this.autoID;
-    }
-    public void setAutoID(int value)
-    {
-        this.autoID = value;
-    }
-
-    private String categoryID;
-    public String getCategoryID()
+    private int categoryID;
+    public int getCategoryID()
     {
         return this.categoryID;
     }
-    public void setCategoryID(String value)
+    public void setCategoryID(int value)
     {
         this.categoryID = value;
     }

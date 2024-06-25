@@ -43,4 +43,9 @@ public class ProductService {
         Call<List<ProductInfo>> call = apiService.GetAllProduct();
         call.enqueue(callback);
     }
+    public void GetListProductCategory (int CategoryID , Callback<List<ProductInfo>> callback)
+    {
+        Call<List<ProductInfo>> call = apiService.GetListProductCategory(CategoryID);
+        call.enqueue(callback);
+    }
 }

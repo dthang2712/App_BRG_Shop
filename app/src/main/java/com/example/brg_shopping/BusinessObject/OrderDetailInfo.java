@@ -3,43 +3,42 @@ package com.example.brg_shopping.BusinessObject;
 import java.io.Serializable;
 
 public class OrderDetailInfo implements Serializable {
-        private int _AutoID;
-        public int getAutoID()
+        private int OrderID;
+        public int getOrderID()
         {
-            return this._AutoID;
+            return this.OrderID;
         }
-        public void setAutoID(int value)
+        public void setOrderID(int  value)
         {
-            this._AutoID = value;
+            this.OrderID = value;
+        }
+    private int OrderDetailID;
+    public int getOrderDetailID()
+    {
+        return this.OrderDetailID;
+    }
+    public void setOrderDetailID(int  value)
+    {
+        this.OrderDetailID = value;
+    }
+
+        private int ProductID;
+        public int getProductID()
+        {
+            return this.ProductID;
+        }
+        public void setProductID(int value)
+        {
+            this.ProductID = value;
         }
 
-        private String _OrderID;
-        public String getOrderID()
-        {
-            return this._OrderID;
-        }
-        public void setOrderID(String value)
-        {
-            this._OrderID = value;
-        }
-
-        private String _ProductID;
-        public String getProductID()
-        {
-            return this._ProductID;
-        }
-        public void setProductID(String value)
-        {
-            this._ProductID = value;
-        }
-
-        private int _Amount;
+        private int Amount;
         public int getAmount()
         {
-            return this._Amount;
+            return this.Amount;
         }
         public void setAmount(int value)
         {
-            this._Amount = value;
+            this.Amount = value;
         }
 }

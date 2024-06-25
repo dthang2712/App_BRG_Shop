@@ -4,32 +4,22 @@ import java.io.Serializable;
 
 public class CustomerAddressInfo implements Serializable
 {
-    private int AutoID;
-    public int getAutoID()
-    {
-        return this.AutoID;
-    }
-    public void setAutoID(int value)
-    {
-        this.AutoID = value;
-    }
-
-    private String CustomerID;
-    public String getCustomerID()
+    private int CustomerID;
+    public int getCustomerID()
     {
         return this.CustomerID;
     }
-    public void setCustomerID(String value)
+    public void setCustomerID(int value)
     {
         this.CustomerID = value;
     }
 
-    private String CustomerAddressID;
-    public String getCustomerAddressID()
+    private int CustomerAddressID;
+    public int getCustomerAddressID()
     {
         return this.CustomerAddressID;
     }
-    public void setCustomerAddressID(String value)
+    public void setCustomerAddressID(int value)
     {
         this.CustomerAddressID = value;
     }

@@ -3,33 +3,33 @@ package com.example.brg_shopping.BusinessObject;
 import java.io.Serializable;
 
 public class ProductImageInfo implements Serializable {
-        private int AutoID;
-        public int getAutoID()
+        private int ProductImageID;
+        public int getProductImageID()
         {
-            return this.AutoID;
+            return this.ProductImageID;
         }
-        public void setAutoID(int value)
+        public void setProductImageID(int value)
         {
-            this.AutoID = value;
+            this.ProductImageID = value;
         }
 
-        private String ProductID;
-        public String getProductID()
+        private int ProductID;
+        public int getProductID()
         {
             return this.ProductID;
         }
-        public void setProductID(String value)
+        public void setProductID(int value)
         {
             this.ProductID = value;
         }
 
-        private byte[] _;
-        public byte[] get()
+        private byte[] Image;
+        public byte[] getImage()
         {
-            return this._;
+            return this.Image;
         }
-        public void set(byte[] value)
+        public void setImage(byte[] value)
         {
-            this._ = value;
+            this.Image = value;
         }
 }

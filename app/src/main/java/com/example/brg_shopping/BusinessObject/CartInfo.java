@@ -4,32 +4,32 @@ import java.io.Serializable;
 
 public class CartInfo  implements Serializable
 {
-    private int AutoID;
-    public int getAutoID()
+    private int CartID;
+    public int getCartID()
     {
-        return this.AutoID;
+        return this.CartID;
     }
-    public void setAutoID(int value)
+    public void setCartID(int value)
     {
-        this.AutoID = value;
+        this.CartID = value;
     }
 
-    private String CustomerID;
-    public String getCustomerID()
+    private int CustomerID;
+    public int getCustomerID()
     {
         return this.CustomerID;
     }
-    public void setCustomerID(String value)
+    public void setCustomerID(int value)
     {
         this.CustomerID = value;
     }
 
-    private String ProductID;
-    public String getProductID()
+    private int ProductID;
+    public int getProductID()
     {
         return this.ProductID;
     }
-    public void setProductID(String value)
+    public void setProductID(int value)
     {
         this.ProductID = value;
     }

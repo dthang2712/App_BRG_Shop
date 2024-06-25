@@ -4,42 +4,32 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class OrderInfo implements Serializable {
-        private int AutoID;
-        public int getAutoID()
-        {
-            return this.AutoID;
-        }
-        public void setAutoID(int value)
-        {
-            this.AutoID = value;
-        }
-
-        private String CustomerID;
-        public String getCustomerID()
+        private int CustomerID;
+        public int getCustomerID()
         {
             return this.CustomerID;
         }
-        public void setCustomerID(String value)
+        public void setCustomerID(int value)
         {
             this.CustomerID = value;
         }
 
-        private String CustomerAddressID;
-        public String getCustomerAddressID()
+        private int CustomerAddressID;
+        public int getCustomerAddressID()
         {
             return this.CustomerAddressID;
         }
-        public void setCustomerAddressID(String value)
+        public void setCustomerAddressID(int value)
         {
             this.CustomerAddressID = value;
         }
 
-        private String OrderID;
-        public String getOrderID()
+        private int OrderID;
+        public int getOrderID()
         {
             return this.OrderID;
         }
-        public void setOrderID(String value)
+        public void setOrderID(int value)
         {
             this.OrderID = value;
         }
@@ -74,12 +64,12 @@ public class OrderInfo implements Serializable {
             this.Status = value;
         }
 
-        private String UserID;
-        public String getUserID()
+        private int UserID;
+        public int getUserID()
         {
             return this.UserID;
         }
-        public void setUserID(String value)
+        public void setUserID(int value)
         {
             this.UserID = value;
         }

@@ -5,22 +5,12 @@ import java.math.BigDecimal;
 
 public class ProductInfo implements Serializable
 {
-    private int autoID;
-    public int getAutoID()
-    {
-        return this.autoID;
-    }
-    public void setAutoID(int value)
-    {
-        this.autoID = value;
-    }
-
-    private String productID;
-    public String getProductID()
+    private int productID;
+    public int getProductID()
     {
         return this.productID;
     }
-    public void setProductID(String value)
+    public void setProductID(int value)
     {
         this.productID = value;
     }
@@ -55,24 +45,14 @@ public class ProductInfo implements Serializable
         this.price = value;
     }
 
-    private String categoryID;
-    public String getCategoryID()
+    private int categoryID;
+    public int getCategoryID()
     {
         return this.categoryID;
     }
-    public void setCategoryID(String value)
+    public void setCategoryID(int value)
     {
         this.categoryID = value;
-    }
-
-    private String providerID;
-    public String getProviderID()
-    {
-        return this.providerID;
-    }
-    public void setProviderID(String value)
-    {
-        this.providerID = value;
     }
 
     private String unit;

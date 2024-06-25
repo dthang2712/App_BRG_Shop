@@ -53,7 +53,7 @@ public class CategoryDetailActivity extends AppCompatActivity {
     public void bindingListProduct (){
         try {
 
-            ProductService.getInstance(getString(R.string.BASE_URL)).GetAllProduct(new Callback<List<ProductInfo>>(){
+            ProductService.getInstance(getString(R.string.BASE_URL)).GetListProductCategory ( categoryInfo.getCategoryID() , new  Callback<List<ProductInfo>>(){
 
             @Override
             public void onResponse(Call<List<ProductInfo>> call, Response<List<ProductInfo>> response) {

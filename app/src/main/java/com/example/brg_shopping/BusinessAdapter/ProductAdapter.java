@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.brg_shopping.BusinessObject.ProductInfo;
+import com.example.brg_shopping.BusinessView.Activity.CategoryDetailActivity;
 import com.example.brg_shopping.BusinessView.Fragment.HomeFragment;
 import com.example.brg_shopping.R;
 import com.example.brg_shopping.databinding.DesignListCategoryBinding;
@@ -16,6 +17,7 @@ import com.example.brg_shopping.databinding.DesignProductBinding;
 import java.util.List;
     public class ProductAdapter extends RecyclerView.Adapter<com.example.brg_shopping.BusinessAdapter.ProductAdapter.ProductViewHolder> {
         private final HomeFragment homeFragment;
+
         private final List<ProductInfo> collection;
 
         public ProductAdapter(HomeFragment homeFragment, List<ProductInfo> collection) {
@@ -40,9 +42,20 @@ import java.util.List;
 
                 holder.binding.imageProduct.setOnClickListener(event -> {
                     homeFragment.handlerViewProductDetail( item );
-
-
                 });
+                holder.binding.TextViewProduct.setOnClickListener(event -> {
+                    homeFragment.handlerViewProductDetail( item );
+                });
+                holder.binding.TextViewPrice.setOnClickListener(event -> {
+                    homeFragment.handlerViewProductDetail( item );
+                });
+                holder.binding.TextViewPriceDisscound.setOnClickListener(event -> {
+                    homeFragment.handlerViewProductDetail( item );
+                });
+                holder.binding.TextViewAddtocard.setOnClickListener(event ->{
+                    homeFragment.InsertToCart(item);
+                });
+
 
             }
         }

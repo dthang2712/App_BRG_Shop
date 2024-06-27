@@ -176,37 +176,6 @@
                     android:padding="20dp"
                     android:src="@drawable/ic_open"/>
             </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/thongbao"
-                android:layout_width="match_parent"
-                android:layout_height="55sp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="10sp"
-                    android:src="@drawable/notification"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:maxLines="1"
-                    android:text="Thông báo"
-                    android:layout_marginStart="10sp"
-                    android:textColor="@color/colorDark"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:layout_width="55sp"
-                    android:layout_height="55sp"
-                    android:layout_marginStart="-55dp"
-                    android:padding="20dp"
-                    android:src="@drawable/ic_open"/>
-            </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/dia_chi_nhan_hang"
                 android:layout_width="match_parent"
@@ -235,37 +204,6 @@
                     android:padding="20dp"
                     android:src="@drawable/ic_open"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/danh_sach_sieu_thi"
-                android:layout_width="match_parent"
-                android:layout_height="55sp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="match_parent"
-                    android:paddingVertical="10sp"
-                    android:src="@drawable/store_list"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:gravity="center_vertical"
-                    android:maxLines="1"
-                    android:layout_marginStart="10sp"
-                    android:text="Danh sách siêu thị"
-                    android:textColor="@color/colorDark"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:layout_width="55sp"
-                    android:layout_height="55sp"
-                    android:layout_marginStart="-55dp"
-                    android:padding="20dp"
-                    android:src="@drawable/ic_open"/>
-            </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/uu_dai"
                 android:layout_width="match_parent"

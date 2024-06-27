@@ -4,43 +4,61 @@ import java.io.Serializable;
 
 public class CartInfo  implements Serializable
 {
-    private int CartID;
+    private int cartID;
     public int getCartID()
     {
-        return this.CartID;
+        return this.cartID;
     }
     public void setCartID(int value)
     {
-        this.CartID = value;
+        this.cartID = value;
     }
 
-    private int CustomerID;
+    private int customerID;
     public int getCustomerID()
     {
-        return this.CustomerID;
+        return this.customerID;
     }
     public void setCustomerID(int value)
     {
-        this.CustomerID = value;
+        this.customerID = value;
     }
 
-    private int ProductID;
+    private int productID;
     public int getProductID()
     {
-        return this.ProductID;
+        return this.productID;
     }
     public void setProductID(int value)
     {
-        this.ProductID = value;
+        this.productID = value;
     }
 
-    private int Amount;
+    private String productName;
+    public String getProductName()
+    {
+        return this.productName;
+    }
+    public void setProductName(String value)
+    {
+        this.productName = value;
+    }
+    private int price;
+    public int getPrice()
+    {
+        return this.price;
+    }
+    public void setPrice(int value)
+    {
+        this.price = value;
+    }
+    private int amount;
     public int getAmount()
     {
-        return this.Amount;
+        return this.amount;
     }
     public void setAmount(int value)
     {
-        this.Amount = value;
+        this.amount = value;
     }
 }

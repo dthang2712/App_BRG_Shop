@@ -38,6 +38,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             holder.binding.ImgCategory.setOnClickListener(event -> {
                 homeFragment.handlerViewCategoryDetail(item);
             });
+            holder.binding.TextViewName.setOnClickListener(event -> {
+                homeFragment.handlerViewCategoryDetail(item);
+            });
+
+
 
         }
     }

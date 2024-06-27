@@ -68,6 +68,7 @@
             android:layout_marginTop="7sp">
 
         <TextView
+            android:id="@+id/minus"
             android:layout_width="20sp"
             android:layout_height="match_parent"
             android:gravity="center"

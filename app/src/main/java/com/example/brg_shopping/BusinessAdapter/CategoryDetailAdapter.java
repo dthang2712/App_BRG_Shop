@@ -42,6 +42,9 @@ public class CategoryDetailAdapter extends RecyclerView.Adapter<CategoryDetailAd
             holder.binding.imageProduct.setOnClickListener(event -> {
                 categoryDetailActivity.handlerViewCategoryProductDetail(item);
             });
+            holder.binding.TextViewAddtocard.setOnClickListener(event -> {
+                categoryDetailActivity.InsertToCart(item);
+            });
         }
     }
 

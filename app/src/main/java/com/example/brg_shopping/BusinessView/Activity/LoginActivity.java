@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (customerInfo.getPassword().equals(edt_mk.getText().toString())) {
                                 edt_mk.setError("Login thành công");
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                intent.putExtra("customerInfo" , customerInfo );
                                 startActivity(intent);
                                 finish();
 

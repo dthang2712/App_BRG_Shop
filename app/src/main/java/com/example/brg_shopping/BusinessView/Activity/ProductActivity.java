@@ -1,7 +1,9 @@
 package com.example.brg_shopping.BusinessView.Activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,8 +20,25 @@ public class ProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_product);
+        try {
+            InitVariable ();
+            setEvenListener();
+        } catch (Exception ex) {
+            Log.e("ERROR", "ProductActivity|" + ex.getMessage());
+            Toast.makeText(getApplicationContext(), "ERROR: " + ex.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 //        btn_back.setOnClickListener(event -> {
 //            finish();
 //        });
+    }
+
+    private void InitVariable() {
+        btn_back = findViewById(R.id.btn_back);
+    }
+
+    private void setEvenListener() {
+        btn_back.setOnClickListener(event -> {
+            finish();
+        });
     }
 }

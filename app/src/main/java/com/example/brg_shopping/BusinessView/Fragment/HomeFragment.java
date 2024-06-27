@@ -1,5 +1,6 @@
 package com.example.brg_shopping.BusinessView.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,18 +11,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.brg_shopping.BusinessAdapter.CategoryAdapter;
 import com.example.brg_shopping.BusinessAdapter.ProductAdapter;
+import com.example.brg_shopping.BusinessObject.CartInfo;
 import com.example.brg_shopping.BusinessObject.CategoryInfo;
+import com.example.brg_shopping.BusinessObject.CustomerInfo;
 import com.example.brg_shopping.BusinessObject.ProductInfo;
+import com.example.brg_shopping.BusinessService.CartService.CartService;
 import com.example.brg_shopping.BusinessService.CategoryService.CategoryService;
 import com.example.brg_shopping.BusinessService.ProductService.ProductService;
 import com.example.brg_shopping.BusinessView.Activity.CategoryDetailActivity;
 import com.example.brg_shopping.BusinessView.Activity.ProductActivity;
 import com.example.brg_shopping.R;
 import com.example.brg_shopping.databinding.DesignListProductDetailBinding;
+import com.example.brg_shopping.databinding.FragmentCardListProductBinding;
 import com.example.brg_shopping.databinding.FragmentHomeBinding;
 
 import java.util.List;
@@ -32,6 +38,9 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
     RecyclerView recyclerView ;
+    CustomerInfo customerInfo;
+    SearchView searchView ;
+    ProductInfo productInfo ;
 
 
     @Override
@@ -39,7 +48,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
+        searchView = view.findViewById(R.id.search_view);
         try {
             InitVariable(view);
             bindingListCategory(view);
@@ -77,6 +86,19 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+    private Context mContext;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mContext = context;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mContext = null;
+    }
 
     public void bindingListCategory (View view){
         CategoryService.getInstance(getString(R.string.BASE_URL)).GetAllCategory(new Callback<List<CategoryInfo>>() {
@@ -104,10 +126,14 @@ public class HomeFragment extends Fragment {
         });
     }
     private void InitVariable (View view){
+        customerInfo = (CustomerInfo) getArguments().getSerializable("customerInfo");
+
+
 
 }
     public void handlerViewCategoryDetail(CategoryInfo item) {
         Intent intent = new Intent(this.getContext(), CategoryDetailActivity.class);
+        intent.putExtra("customerInfo" , customerInfo);
         intent.putExtra("categoryInfo" , item);
         startActivity(intent);
     }
@@ -115,5 +141,31 @@ public class HomeFragment extends Fragment {
     public void handlerViewProductDetail(ProductInfo item) {
         Intent intent = new Intent(this.getContext(), ProductActivity.class);
         startActivity(intent);
+    }
+
+    public void InsertToCart(ProductInfo item) {
+
+        CartInfo cartInfo = new CartInfo();
+        cartInfo.setCustomerID(customerInfo.getCustomerID());
+        cartInfo.setProductID(item.getProductID());
+        CartService.getInstance(getString(R.string.BASE_URL)).insertCart(cartInfo, new Callback<Boolean>() {
+            @Override
+            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                if (!response.isSuccessful()) {
+                    Toast.makeText(mContext, response.message(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Boolean result = response.body();
+                if (result == true ){
+                    Toast.makeText(mContext, "Thêm vào giỏ hàng thành công " , Toast.LENGTH_SHORT ).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Boolean> call, Throwable t) {
+                Toast.makeText(mContext, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

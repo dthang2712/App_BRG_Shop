@@ -7,7 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class CustomerInfo implements Serializable {
-    private int CustomerID;
+    private int customerID;
     private String password;
     private String fullName;
     private String dateOfBirth;
@@ -16,10 +16,10 @@ public class CustomerInfo implements Serializable {
     private String phoneNumber;
     private String email;
     public int getCustomerID() {
-        return this.CustomerID;
+        return this.customerID;
     }
     public void setCustomerID(int value) {
-        this.CustomerID = value;
+        this.customerID = value;
     }
     public String getPassword() {
         return this.password;

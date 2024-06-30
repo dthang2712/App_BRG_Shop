@@ -73,9 +73,10 @@
             android:exported="false" />
         <activity
             android:name=".BusinessView.Activity.CategoryDetailActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
+        <activity
+            android:name=".BusinessView.Activity.SearchActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

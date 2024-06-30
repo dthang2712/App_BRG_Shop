@@ -35,6 +35,9 @@ public class LoginActivity extends AppCompatActivity {
         try {
             InitVariable();
             setEvenListener();
+            if (this.getResources().getString(R.string.BY_PASS).equals("true")) {
+                byPass();
+            }
         } catch (Exception ex) {
             Log.e("ERROR", "LoginActivity|" + ex.getMessage());
             Toast.makeText(getApplicationContext(), "ERROR: " + ex.getMessage(), Toast.LENGTH_SHORT).show();
@@ -68,8 +71,6 @@ public class LoginActivity extends AppCompatActivity {
                                 intent.putExtra("customerInfo" , customerInfo );
                                 startActivity(intent);
                                 finish();
-
-
 
                                 Log.d("DEBUG", "LoginActivity|Login thành công");
 
@@ -117,6 +118,11 @@ public class LoginActivity extends AppCompatActivity {
         edt_mk = findViewById(R.id.edt_mk);
         register = findViewById(R.id.register);
         customerInfo = (CustomerInfo) getIntent().getSerializableExtra("customerInfo");
+    }
 
+    private void byPass() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("customerInfo" , customerInfo );
+        startActivity(intent);
     }
 }

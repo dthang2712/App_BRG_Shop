@@ -4,14 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.brg_shopping.BusinessAdapter.CategoryAdapter;
@@ -23,12 +25,15 @@ import com.example.brg_shopping.BusinessObject.ProductInfo;
 import com.example.brg_shopping.BusinessService.CartService.CartService;
 import com.example.brg_shopping.BusinessService.CategoryService.CategoryService;
 import com.example.brg_shopping.BusinessService.ProductService.ProductService;
+import com.example.brg_shopping.BusinessView.Activity.CartVerifyActivity;
 import com.example.brg_shopping.BusinessView.Activity.CategoryDetailActivity;
 import com.example.brg_shopping.BusinessView.Activity.ProductActivity;
+import com.example.brg_shopping.BusinessView.Activity.SearchActivity;
 import com.example.brg_shopping.R;
 import com.example.brg_shopping.databinding.DesignListProductDetailBinding;
 import com.example.brg_shopping.databinding.FragmentCardListProductBinding;
 import com.example.brg_shopping.databinding.FragmentHomeBinding;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.List;
 
@@ -39,7 +44,7 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
     RecyclerView recyclerView ;
     CustomerInfo customerInfo;
-    SearchView searchView ;
+    RelativeLayout searchView ;
     ProductInfo productInfo ;
 
 
@@ -48,9 +53,9 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        searchView = view.findViewById(R.id.search_view);
         try {
             InitVariable(view);
+            setEventListener();
             bindingListCategory(view);
             bindingListProduct(view);
         } catch (Exception e) {
@@ -125,12 +130,19 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-    private void InitVariable (View view){
+
+    private void InitVariable(View view) {
         customerInfo = (CustomerInfo) getArguments().getSerializable("customerInfo");
+        searchView = view.findViewById(R.id.search_view);
+    }
 
+    private void setEventListener() {
+        searchView.setOnClickListener(event ->{
+            Intent intent = new Intent(this.getContext(), SearchActivity.class);
+            startActivity(intent);
+        });
+    }
 
-
-}
     public void handlerViewCategoryDetail(CategoryInfo item) {
         Intent intent = new Intent(this.getContext(), CategoryDetailActivity.class);
         intent.putExtra("customerInfo" , customerInfo);

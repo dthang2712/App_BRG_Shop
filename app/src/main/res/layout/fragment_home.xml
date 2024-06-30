@@ -17,9 +17,10 @@
             <RelativeLayout
                 android:id="@+id/layout_header"
                 android:layout_width="match_parent"
-                android:layout_height="120dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/background_header"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
@@ -28,42 +29,36 @@
                 <ImageView
                     android:id="@+id/image_logo"
                     android:layout_width="match_parent"
-                    android:layout_height="53dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="50dp"
-                    android:layout_marginTop="19dp"
-                    android:paddingBottom="20dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="12dp"
                     android:src="@drawable/logo_back_ground" />
 
-                <SearchView
+                <RelativeLayout
                     android:id="@+id/search_view"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_below="@id/image_logo"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/bg_gray_border_radius"
-                    android:iconifiedByDefault="false"
-                    android:queryBackground="@android:color/transparent"
-                    android:queryHint="Bạn đang tìm sản phẩm nào ?"
-                    android:searchIcon="@drawable/icon_search_white" />
+                    android:layout_below="@id/background_header"
+                    android:layout_marginTop="-20dp">
 
-                <!--        <TextView-->
-                <!--            android:id="@+id/search_view"-->
-                <!--            android:layout_width="match_parent"-->
-                <!--            android:layout_height="50dp"-->
-                <!--            android:layout_alignParentBottom="true"-->
-                <!--            android:layout_marginHorizontal="17dp"-->
-                <!--            android:background="@drawable/bg_search"-->
-                <!--            android:gravity="center_vertical"-->
-                <!--            android:paddingLeft="45dp"-->
-                <!--            android:text="Tìm kiếm sản phẩm" />-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginHorizontal="17dp"
+                        android:background="@drawable/bg_search"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="45dp"
+                        android:text="Tìm kiếm sản phẩm" />
 
-                <!--        <ImageView-->
-                <!--            android:layout_width="23dp"-->
-                <!--            android:layout_height="40dp"-->
-                <!--            android:layout_alignParentBottom="true"-->
-                <!--            android:layout_marginLeft="30dp"-->
-                <!--            android:src="@drawable/icon_search_white" />-->
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/icon_search_white" />
+                </RelativeLayout>
+
             </RelativeLayout>
 
             <!--    <androidx.core.widget.NestedScrollView-->
@@ -90,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/layout_header"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:autoStart="true"
                 android:flipInterval="2000"
                 android:inAnimation="@android:anim/slide_in_left"

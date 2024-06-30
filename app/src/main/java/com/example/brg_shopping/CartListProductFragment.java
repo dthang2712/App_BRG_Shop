@@ -83,10 +83,6 @@ public class CartListProductFragment extends Fragment {
                     recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false));
                     List<CartInfo> listCart = response.body();
 
-                    // Quý: bỏ đoạn code này đi để xem data API
-
-                    //
-
                     if (listCart.size() > 0) {
                         CartAdapter categoryAdapter = new CartAdapter(CartListProductFragment.this, listCart);
                         recyclerView.setAdapter(categoryAdapter);

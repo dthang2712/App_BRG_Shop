@@ -21,7 +21,6 @@ import com.example.brg_shopping.BusinessView.Fragment.AccountInfoFragment;
 import com.example.brg_shopping.BusinessView.Fragment.CartConfirmFragment;
 import com.example.brg_shopping.BusinessView.Fragment.HomeFragment;
 import com.example.brg_shopping.BusinessView.Fragment.ProfileFragment;
-import com.example.brg_shopping.BusinessView.Fragment.SearchFragment;
 import com.example.brg_shopping.CartListProductFragment;
 import com.example.brg_shopping.R;
 import com.example.brg_shopping.databinding.ActivityMainBinding;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     CustomerInfo customerInfo;
     HomeFragment homeFragment = new HomeFragment();
 
-    SearchFragment searchFragment = new SearchFragment();
     CartListProductFragment cartListProductFragment = new CartListProductFragment();
     AccountInfoFragment accountInfoFragment = new AccountInfoFragment();
     BottomNavigationView bottom_view ;
@@ -88,8 +86,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
     }
 
     private void InitVariable() {

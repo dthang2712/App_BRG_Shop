@@ -72,23 +72,26 @@
                 android:text="Kết quả tìm kiếm theo danh mục"
                 android:layout_marginTop="14sp"
                 android:textSize="16sp"
+                android:visibility="gone"
                 android:textColor="@color/grayAeb"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_category_result"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:nestedScrollingEnabled="false"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Kết quả tìm kiếm theo sản phẩm"
-                android:layout_marginTop="14sp"
+                android:layout_marginVertical="15dp"
                 android:textSize="16sp"
                 android:textColor="@color/grayAeb"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_production_result"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:nestedScrollingEnabled="false"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

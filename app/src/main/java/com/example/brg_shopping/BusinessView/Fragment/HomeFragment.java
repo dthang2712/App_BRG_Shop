@@ -153,6 +153,8 @@ public class HomeFragment extends Fragment {
 
     public void handlerViewProductDetail(ProductInfo item) {
         Intent intent = new Intent(this.getContext(), ProductActivity.class);
+        intent.putExtra("ProductInfo" , item);
+        intent.putExtra("customerInfo" , customerInfo);
         startActivity(intent);
     }
 

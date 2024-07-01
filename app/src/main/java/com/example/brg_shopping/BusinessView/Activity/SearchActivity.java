@@ -125,6 +125,8 @@ public class SearchActivity extends AppCompatActivity {
 
     public void handlerViewProductDetail(ProductInfo item) {
         Intent intent = new Intent(this, ProductActivity.class);
+        intent.putExtra("ProductInfo" , item);
+        intent.putExtra("customerInfo" , customerInfo);
         startActivity(intent);
     }
 

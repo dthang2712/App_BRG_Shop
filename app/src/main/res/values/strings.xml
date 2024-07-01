@@ -4,6 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="BASE_URL">http://192.168.0.102/</string>
 
-<!--    <string name="BY_PASS">false</string>-->
-    <string name="BY_PASS">true</string>
+    <string name="BY_PASS">false</string>
+<!--    <string name="BY_PASS">true</string>-->
 </resources>

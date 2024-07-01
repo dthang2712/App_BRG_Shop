@@ -139,6 +139,7 @@ public class HomeFragment extends Fragment {
     private void setEventListener() {
         searchView.setOnClickListener(event ->{
             Intent intent = new Intent(this.getContext(), SearchActivity.class);
+            intent.putExtra("customerInfo" , customerInfo);
             startActivity(intent);
         });
     }

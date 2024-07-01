@@ -60,11 +60,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/layout_header"
-        android:background="@color/colorLight">
+        android:background="@color/colorGrayF8">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingHorizontal="27sp"
+            android:paddingHorizontal="10dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -91,7 +91,6 @@
                 android:id="@+id/list_production_result"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="10dp"
                 android:nestedScrollingEnabled="false"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -1,6 +1,7 @@
 package com.example.brg_shopping.BusinessService.CartService;
 
 import com.example.brg_shopping.BusinessObject.CartInfo;
+import com.example.brg_shopping.BusinessObject.ProductInfo;
 
 import java.util.List;
 
@@ -45,6 +46,10 @@ public class CartService {
     }
     public  void GetCartCustomer (int CustomerID , Callback<List<CartInfo>> callback){
         Call<List<CartInfo>> call = apiService.GetCartCustomer(CustomerID);
+        call.enqueue(callback);
+    }
+    public  void GetProductionSearch (String keyWord , Callback<List<ProductInfo>> callback){
+        Call<List<ProductInfo>> call = apiService.GetProductionSearch(keyWord);
         call.enqueue(callback);
     }
 }

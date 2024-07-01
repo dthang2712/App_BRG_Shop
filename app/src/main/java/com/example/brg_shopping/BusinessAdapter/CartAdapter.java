@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.brg_shopping.BusinessObject.CartInfo;
-import com.example.brg_shopping.CartListProductFragment;
+import com.example.brg_shopping.BusinessView.Fragment.CartListProductFragment;
 import com.example.brg_shopping.R;
 import com.example.brg_shopping.databinding.DesignListCardBinding;
 

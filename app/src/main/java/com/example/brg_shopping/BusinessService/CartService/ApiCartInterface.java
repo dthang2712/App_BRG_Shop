@@ -1,6 +1,7 @@
 package com.example.brg_shopping.BusinessService.CartService;
 
 import com.example.brg_shopping.BusinessObject.CartInfo;
+import com.example.brg_shopping.BusinessObject.ProductInfo;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface ApiCartInterface {
     Call<Boolean> insertCart (@Body CartInfo infoInsert);
     @GET ("api/manager/Cart/get-product-customer")
     Call <List<CartInfo>> GetCartCustomer (@Query("CustomerID") int CustomerID);
+    @GET ("api/search")
+    Call <List<ProductInfo>> GetProductionSearch (@Query("KeyWord") String KeyWord);
 }

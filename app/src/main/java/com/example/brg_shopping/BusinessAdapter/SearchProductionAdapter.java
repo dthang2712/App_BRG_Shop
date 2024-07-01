@@ -1,5 +1,6 @@
 package com.example.brg_shopping.BusinessAdapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +19,10 @@ import com.example.brg_shopping.databinding.DesignProductBinding;
 import java.util.List;
 
 public class SearchProductionAdapter extends RecyclerView.Adapter<SearchProductionAdapter.SearchCategoryHolder> {
-    private final SearchActivity searchActivity;
+    private final SearchActivity context;
     private final List<ProductInfo> collection ;
-    public SearchProductionAdapter (SearchActivity searchActivity, List<ProductInfo> collection ){
-        this.searchActivity = searchActivity;
+    public SearchProductionAdapter (SearchActivity context, List<ProductInfo> collection ){
+        this.context = context;
         this.collection = collection;
     }
     @NonNull
@@ -36,9 +37,14 @@ public class SearchProductionAdapter extends RecyclerView.Adapter<SearchProducti
     public void onBindViewHolder(@NonNull SearchCategoryHolder holder, int position) {
         ProductInfo item = collection.get(position);
         if (item != null){
-//            holder.binding.TextViewProduct.setOnClickListener(event -> {
-//                searchActivity.handlerViewCategoryDetail(item);
-//            });
+            holder.binding.TextViewProduct.setText(item.getProductName());
+            holder.binding.TextViewPrice.setText(String.valueOf(item.getPrice()));
+            holder.binding.TextViewAddtocard.setOnClickListener(event -> {
+                context.InsertToCart(item);
+            });
+            holder.binding.imageProduct.setOnClickListener(event -> {
+                context.handlerViewProductDetail(item);
+            });
         }
     }
 

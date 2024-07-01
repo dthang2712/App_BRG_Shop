@@ -1,29 +1,21 @@
 package com.example.brg_shopping.BusinessView.Activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.brg_shopping.BusinessObject.CustomerInfo;
 import com.example.brg_shopping.BusinessView.Fragment.AccountInfoFragment;
-import com.example.brg_shopping.BusinessView.Fragment.CartConfirmFragment;
 import com.example.brg_shopping.BusinessView.Fragment.HomeFragment;
-import com.example.brg_shopping.BusinessView.Fragment.ProfileFragment;
-import com.example.brg_shopping.CartListProductFragment;
+import com.example.brg_shopping.BusinessView.Fragment.CartListProductFragment;
 import com.example.brg_shopping.R;
-import com.example.brg_shopping.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

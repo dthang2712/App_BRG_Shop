@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartListProductFragment">
+    tools:context=".BusinessView.Fragment.CartListProductFragment">
         <RelativeLayout
             android:id="@+id/layout_header"
             android:layout_width="match_parent"

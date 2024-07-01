@@ -1,4 +1,4 @@
-package com.example.brg_shopping;
+package com.example.brg_shopping.BusinessView.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,10 +17,10 @@ import com.example.brg_shopping.BusinessObject.CartInfo;
 import com.example.brg_shopping.BusinessObject.CustomerInfo;
 import com.example.brg_shopping.BusinessService.CartService.CartService;
 import com.example.brg_shopping.BusinessView.Activity.CategoryDetailActivity;
+import com.example.brg_shopping.R;
 import com.example.brg_shopping.databinding.FragmentCardListProductBinding;
 
 import java.util.List;
-import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;

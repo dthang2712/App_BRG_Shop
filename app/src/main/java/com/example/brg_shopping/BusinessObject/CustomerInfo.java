@@ -7,7 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class CustomerInfo implements Serializable {
-    private int customerID;
+    private int customerID = 0;
     private String password;
     private String fullName;
     private String dateOfBirth;

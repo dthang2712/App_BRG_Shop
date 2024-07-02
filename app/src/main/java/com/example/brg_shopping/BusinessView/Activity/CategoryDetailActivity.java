@@ -100,7 +100,7 @@ public class CategoryDetailActivity extends AppCompatActivity {
     }
 
     public void handlerViewCategoryProductDetail(ProductInfo item) {
-        Intent intent = new Intent(getApplicationContext(), DesignListProductDetailBinding.class);
+        Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
         startActivity(intent);
     }
     public void InsertToCart (ProductInfo item) {

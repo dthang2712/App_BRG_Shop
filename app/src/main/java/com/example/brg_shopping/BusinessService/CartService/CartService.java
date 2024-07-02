@@ -48,8 +48,8 @@ public class CartService {
         Call<List<CartInfo>> call = apiService.GetCartCustomer(CustomerID);
         call.enqueue(callback);
     }
-    public  void GetProductionSearch (String keyWord , Callback<List<ProductInfo>> callback){
-        Call<List<ProductInfo>> call = apiService.GetProductionSearch(keyWord);
+    public  void SearchProduct (String search , Callback<List<ProductInfo>> callback){
+        Call<List<ProductInfo>> call = apiService.SearchProduct(search);
         call.enqueue(callback);
     }
 }

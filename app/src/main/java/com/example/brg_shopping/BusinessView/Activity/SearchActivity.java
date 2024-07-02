@@ -1,6 +1,5 @@
 package com.example.brg_shopping.BusinessView.Activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,24 +9,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.brg_shopping.BusinessAdapter.CartAdapter;
-import com.example.brg_shopping.BusinessAdapter.SearchCategoryAdapter;
 import com.example.brg_shopping.BusinessAdapter.SearchProductionAdapter;
 import com.example.brg_shopping.BusinessObject.CartInfo;
-import com.example.brg_shopping.BusinessObject.CategoryInfo;
 import com.example.brg_shopping.BusinessObject.CustomerInfo;
 import com.example.brg_shopping.BusinessObject.ProductInfo;
 import com.example.brg_shopping.BusinessService.CartService.CartService;
-import com.example.brg_shopping.BusinessView.Fragment.CartListProductFragment;
 import com.example.brg_shopping.R;
-import com.example.brg_shopping.databinding.FragmentCardListProductBinding;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -47,7 +39,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         initVariable();
         setEvenListener();
-        search("qq");
+
     }
 
     private void search(String query) {
@@ -67,7 +59,7 @@ public class SearchActivity extends AppCompatActivity {
             listProductionResult.setAdapter(searchProductionAdapter);
         } else {
             try {
-                CartService.getInstance(getString(R.string.BASE_URL)).GetProductionSearch(query, new Callback<List<ProductInfo>>() {
+                CartService.getInstance(getString(R.string.BASE_URL)).SearchProduct(query, new Callback<List<ProductInfo>>() {
 
                     @Override
                     public void onResponse(Call<List<ProductInfo>> call, Response<List<ProductInfo>> response) {
@@ -78,8 +70,8 @@ public class SearchActivity extends AppCompatActivity {
                         List<ProductInfo> productInfoList = response.body();
 
                         if (productInfoList.size() > 0) {
-                            SearchProductionAdapter searchProductionAdapter = new SearchProductionAdapter((SearchActivity) getApplicationContext(), productInfoList);
-                            listProductionResult.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+                            SearchProductionAdapter searchProductionAdapter = new SearchProductionAdapter(SearchActivity.this, productInfoList);
+                            listProductionResult.setLayoutManager(new GridLayoutManager(SearchActivity.this, 2));
                             listProductionResult.setAdapter(searchProductionAdapter);
                         }
 

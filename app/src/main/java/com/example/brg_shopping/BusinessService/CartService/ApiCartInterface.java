@@ -16,6 +16,6 @@ public interface ApiCartInterface {
     Call<Boolean> insertCart (@Body CartInfo infoInsert);
     @GET ("api/manager/Cart/get-product-customer")
     Call <List<CartInfo>> GetCartCustomer (@Query("CustomerID") int CustomerID);
-    @GET ("api/search")
-    Call <List<ProductInfo>> GetProductionSearch (@Query("KeyWord") String KeyWord);
+    @GET ("api/maneger/Product/search")
+    Call <List<ProductInfo>> SearchProduct(@Query("search") String KeyWord);
 }

@@ -88,6 +88,7 @@
         android:background="@drawable/bg_light_radius"
         android:hint="PassWord"
         android:paddingLeft="12dp"
+        android:inputType="textPassword"
         android:paddingRight="5dp"
         android:textSize="16sp" />
     <EditText
